@@ -127,9 +127,9 @@ Following the instructions found in this [blog post](https://aws.amazon.com/blog
 
 One you have successfully run the above setup, you should be able to see dashboards similar to the images shown below.
 
-![Sample Image 1](../images/image1.png)
+![Sample Image 1](.images/image1.png)
 
-![Sample Image 2](../images/image2.png)
+![Sample Image 2](.images/image2.png)
 
 ## Links 
 
