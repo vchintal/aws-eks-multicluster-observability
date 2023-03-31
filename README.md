@@ -2,14 +2,13 @@
 
 ## Audience
 
-This repo is a must for anyone who wants to try the AWS provided Observability Accelerator (link #1), with more than one EKS cluster and verify the collected metrics from all the clusters in the dashboards of a common `Amazon Managed Grafana` workspace.
-
+This repo is a must for anyone who wants to try the [AWS provided Observability Accelerator](https://github.com/aws-observability/terraform-aws-observability-accelerator), with more than one EKS cluster and verify the collected metrics from all the clusters in the dashboards of a common `Amazon Managed Grafana` workspace.
 
 ## Repo Organization 
 
 The repo has two folders, each with an unique purpose :
 1. `eks-cluster-with-vpc`: A terraform repo that uses upstream EKS blueprints to stand up EKS clusters in their own VPC
-2. `observability`: A terraform repo that uses the Observability Accelerator (link #1) to :
+2. `observability`: A terraform repo that uses the [Observability Accelerator](https://github.com/aws-observability/terraform-aws-observability-accelerator) to :
     1. Create a `Amazon Managed Service for Prometheus` workspace
     2. Create `Recording` and `Alerting` rules in AMP
     3. Create a data source (based on AMP) and dashboards folder in `Amazon Managed Grafana`
@@ -125,12 +124,9 @@ Following the instructions found in this [blog post](https://aws.amazon.com/blog
 
 ## Verifying Multicluster Observability
 
-One you have successfully run the above setup, you should be able to see dashboards similar to the images shown below.
+One you have successfully run the above setup, you should be able to see dashboards similar to the images shown below in `Amazon Managed Grafana` workspace.
 
 ![Sample Image 1](.images/image1.png)
 
 ![Sample Image 2](.images/image2.png)
 
-## Links 
-
-1. https://github.com/aws-observability/terraform-aws-observability-accelerator
