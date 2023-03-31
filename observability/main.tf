@@ -40,9 +40,9 @@ provider "grafana" {
 
 module "aws_observability_accelerator" {
   source = "../../terraform-aws-observability-accelerator"
-  
-  aws_region     = var.aws_region
-  
+
+  aws_region = var.aws_region
+
   # creates a new Amazon Managed Prometheus workspace, defaults to true
   enable_managed_prometheus = local.create_new_workspace
 
@@ -53,7 +53,7 @@ module "aws_observability_accelerator" {
   # sets up the Amazon Managed Prometheus alert manager at the workspace level
   enable_alertmanager = var.enable_alertmanager
 
-  # decide whether to create a dashboard folder 
+  # decide whether to create a dashboard folder
   create_dashboard_folder = var.create_dashboard_folder
 
   # decide whether to create/set Amazon Managed service for Prometheus as a datasource
@@ -70,7 +70,7 @@ module "aws_observability_accelerator" {
 
 module "eks_monitoring" {
   source = "../../terraform-aws-observability-accelerator//modules/eks-monitoring"
-  
+
   eks_cluster_id = var.eks_cluster_id
 
   # deploys AWS Distro for OpenTelemetry operator into the cluster
@@ -81,14 +81,14 @@ module "eks_monitoring" {
 
   enable_java = true
   java_config = {
-    enable_alerting_rules = var.enable_java_alerting_rules
+    enable_alerting_rules  = var.enable_java_alerting_rules
     enable_recording_rules = var.enable_java_recording_rules
-    scrape_sample_limit = 1
+    scrape_sample_limit    = 1
   }
-  enable_dashboards = var.enable_dashboards
-  enable_alerting_rules = var.enable_alerting_rules
+  enable_dashboards      = var.enable_dashboards
+  enable_alerting_rules  = var.enable_alerting_rules
   enable_recording_rules = var.enable_recording_rules
-  
+
   dashboards_folder_id            = module.aws_observability_accelerator.grafana_dashboards_folder_id
   managed_prometheus_workspace_id = module.aws_observability_accelerator.managed_prometheus_workspace_id
 
