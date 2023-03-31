@@ -38,8 +38,10 @@ provider "grafana" {
   auth = var.grafana_api_key
 }
 
+# Once the pending PR to the upstream https://github.com/aws-observability/terraform-aws-observability-accelerator
+# goes thru, replace the source link below to upstream link
 module "aws_observability_accelerator" {
-  source = "../../terraform-aws-observability-accelerator"
+  source = "github.com/vchintal/terraform-aws-observability-accelerator"
 
   aws_region = var.aws_region
 
@@ -67,8 +69,10 @@ module "aws_observability_accelerator" {
 
 }
 
+# Once the pending PR to the upstream https://github.com/aws-observability/terraform-aws-observability-accelerator
+# goes thru, replace the source link below to upstream link
 module "eks_monitoring" {
-  source = "../../terraform-aws-observability-accelerator//modules/eks-monitoring"
+  source = "github.com/vchintal/terraform-aws-observability-accelerator//modules/eks-monitoring"
 
   eks_cluster_id = var.eks_cluster_id
 
