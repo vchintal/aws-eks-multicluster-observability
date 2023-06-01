@@ -1,4 +1,7 @@
-# AWS EKS Multicluster Observability
+# ⛔️ DEPRECATED - AWS EKS Multicluster Observability
+
+>**Warning**
+>This repo has found a new home here: https://github.com/aws-observability/terraform-aws-observability-accelerator/tree/main/examples/eks-multicluster where it will be maintained going forward.
 
 ## Audience
 
